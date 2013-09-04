@@ -35,11 +35,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author <a href="mailto:cleclerc@cloudbees.com">Cyrille Le Clerc</a>
- */
-
-
 @WebServlet(value = "/product/upload", loadOnStartup = 2)
 @MultipartConfig
 public class ProductImageUploadServlet extends HttpServlet {

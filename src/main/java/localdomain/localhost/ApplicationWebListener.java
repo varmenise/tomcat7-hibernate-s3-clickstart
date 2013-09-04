@@ -39,8 +39,8 @@ import java.util.List;
  * <li>Inject demo data</li>
  * </ul>
  *
- * @author <a href="mailto:cleclerc@cloudbees.com">Cyrille Le Clerc</a>
  */
+
 @WebListener
 public class ApplicationWebListener implements ServletContextListener {
     private static EntityManagerFactory entityManagerFactory;

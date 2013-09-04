@@ -30,11 +30,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * @author <a href="mailto:cleclerc@cloudbees.com">Cyrille Le Clerc</a>
- */
-
-
 @WebServlet(value = "/product/list", loadOnStartup = 1)
 public class ProductListServlet extends HttpServlet {
 
