@@ -86,7 +86,7 @@ public class ProductImageUploadServlet extends HttpServlet {
 
         } catch (Exception e) {
             request.setAttribute("error", "Error: " + e.getMessage());
-            request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/uploadfileerror.jsp").forward(request, response);
         }
 
     }
