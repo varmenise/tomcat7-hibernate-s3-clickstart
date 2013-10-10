@@ -35,8 +35,8 @@ public class AmazonS3ConfigurationServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         try {
             String accessKey = request.getParameter("accessKey");
-            String secretKey= request.getParameter("secretKey");
-            String bucketName= request.getParameter("bucket");
+            String secretKey = request.getParameter("secretKey");
+            String bucketName = request.getParameter("bucket");
 
             AmazonS3Resources s3Resources = new AmazonS3Resources(accessKey, secretKey, bucketName);
             logger.info("Amazon S3 configuration successful");
@@ -50,6 +50,7 @@ public class AmazonS3ConfigurationServlet extends HttpServlet {
 
         } catch (Exception e) {
             request.setAttribute("error", "Error: " + e.getMessage());
+            request.setAttribute("back", "/");
             request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
         }
     }

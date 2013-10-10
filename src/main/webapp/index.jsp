@@ -44,5 +44,7 @@ Don't forget to allow anonymous read access to your Amazon S3 Bucket with a Buck
 </pre></code>
 
 More details at <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucketPolicies.html">Amazon s3 - Using Bucket Policies</a>
+</br>
+How to reuse AWS in your applications: <a href="http://developer.cloudbees.com/bin/view/RUN/AmazonWebServices">Amazon Web Services on CloudBees applications</a>
 </body>
 </html>

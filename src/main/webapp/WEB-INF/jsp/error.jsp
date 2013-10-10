@@ -5,7 +5,8 @@
 </head>
 <body>
 
-<% out.print(request.getAttribute("error")); %> Click <a href="<% request.getServletPath();%>">here</a> to go back to the main page.
+<% out.print(request.getAttribute("error")); %> Click <a href="<%=request.getAttribute("back")%>">here</a> to go back to
+the main page.
 
 </body>
 </html>
