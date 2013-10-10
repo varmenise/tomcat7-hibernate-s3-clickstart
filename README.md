@@ -9,6 +9,22 @@ Should the build succeed, this seed app is deployed on a Tomcat 7 container.
 
 ## Application Overview
 
+### Step 1: Amazon S3 Configuration ###
+
+You will need to enter your AWS credentials and also the bucket name in which you would like to upload your images. We also provide a Amazon S3 Bucket Configuration Tip to allow anonymous read access to your Amazon S3 Bucket with a Bucket Policy.
+
+<img alt="Bees Shop - CloudBees MySQL" src="https://raw.github.com/fbelzunc/tomcat7-hibernate-s3-clickstart/master/src/site/img/product-amazon-configuration.png" style="width: 70%;"/>
+
+### Step 2: Add products ###
+
+Once you are sucessfully authenticated on AmazonS3, you can now starting adding new products to the list. You just need the name, the image and the credits of the image.
+
+<img alt="Bees Shop - CloudBees MySQL" src="https://raw.github.com/fbelzunc/tomcat7-hibernate-s3-clickstart/master/src/site/img/product-addproduct.png" style="width: 70%;"/>
+
+You can also have a view of the current products which are available on your product list. By the default you will have two product added which are in a CloudBees bucket.
+
+<img alt="Bees Shop - CloudBees MySQL" src="https://raw.github.com/fbelzunc/tomcat7-hibernate-s3-clickstart/master/src/site/img/product-productslist.png" style="width: 70%;"/>
+
 # Create application manually
 
 ### Create Tomcat container
