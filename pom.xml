@@ -22,10 +22,10 @@
         <version>2</version>
     </parent>
     <groupId>localdomain.localhost</groupId>
-    <artifactId>tomcat7-hibernate-jpa-clickstart</artifactId>
+    <artifactId>tomcat7-hibernate-amazonS3-clickstart</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>tomcat7-hibernate-jpa-clickstart Webapp</name>
+    <name>tomcat7-hibernate-amazonS3-clickstart Webapp</name>
     <dependencies>
         <dependency>
             <groupId>javax.persistence</groupId>
