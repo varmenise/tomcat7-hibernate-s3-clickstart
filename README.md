@@ -21,7 +21,7 @@ Once you are sucessfully authenticated on AmazonS3, you can now starting adding 
 
 <img alt="Bees Shop - CloudBees MySQL" src="https://raw.github.com/fbelzunc/tomcat7-hibernate-s3-clickstart/master/src/site/img/product-addproduct.png" style="width: 70%;"/>
 
-You can also have a view of the current products which are available on your product list. By the default you will have two product added which are in a CloudBees bucket.
+You also have a view of the current products which are available on your product list. By the default you will have two product added which are in a CloudBees bucket.
 
 <img alt="Bees Shop - CloudBees MySQL" src="https://raw.github.com/fbelzunc/tomcat7-hibernate-s3-clickstart/master/src/site/img/product-productslist.png" style="width: 70%;"/>
 
