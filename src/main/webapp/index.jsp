@@ -1,3 +1,4 @@
+<%@ page import="java.io.PrintWriter" %>
 <html>
 <head>
     <title>Tomcat 7 Hibernate JPA Amazon S3 Demo</title>
@@ -5,26 +6,33 @@
 <body>
 <h1>Tomcat 7 Hibernate JPA Amazon S3 Demo</h1>
 
-<form action="/amazonS3/configuration" method="post">
+
+<%
+    if (request.getAttribute("throwable") != null) {
+        Throwable t = (Throwable) request.getAttribute("throwable");
+%><p>An exception occurred: <strong><code><%= t.getMessage() %></code></strong></p><%
+    }
+%>
+<form action="${pageContext.request.contextPath}/amazonS3/configuration" method="post">
     <table>
         <tr>
-            <td> Amazon accessKey: </td>
-            <td> <input type="text" name="accessKey" value="" size="15"> </td>
+            <td> Amazon accessKey:</td>
+            <td><input type="text" name="accessKey" value="" size="15"></td>
         </tr>
 
         <tr>
-            <td> Amazon secretKey: </td>
-            <td> <input type="password" name="secretKey" value="" size="15"> </td>
+            <td> Amazon secretKey:</td>
+            <td><input type="password" name="secretKey" value="" size="15"></td>
         </tr>
 
         <tr>
             <td> Amazon S3 bucket name:
-            <td> <input type="text" name="bucket" value="" size="15"> </td>
+            <td><input type="text" name="bucket" value="" size="15"></td>
         </tr>
 
         <tr>
-            <td> </td>
-            <td align ="right"> <input type="submit" name="S3OpenConfiguration" value="Submit"/> </td>
+            <td>&nbsp;</td>
+            <td align="right"><input type="submit" name="S3OpenConfiguration" value="Save configuration and enter site"/></td>
         </tr>
     </table>
 </form>
@@ -41,10 +49,25 @@ Don't forget to allow anonymous read access to your Amazon S3 Bucket with a Buck
       } ],
   "Version" : "2008-10-17"
 }
-</pre></code>
+</pre>
+</code>
 
-More details at <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucketPolicies.html">Amazon s3 - Using Bucket Policies</a>
+More details at <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucketPolicies.html">Amazon s3 - Using
+    Bucket Policies</a>
 </br>
-How to reuse AWS in your applications: <a href="http://developer.cloudbees.com/bin/view/RUN/AmazonWebServices">Amazon Web Services on CloudBees applications</a>
+How to reuse AWS in your applications: <a href="http://developer.cloudbees.com/bin/view/RUN/AmazonWebServices">Amazon
+    Web Services on CloudBees applications</a>
+
+
+<%
+    if (request.getAttribute("throwable") != null) {
+        Throwable t = (Throwable) request.getAttribute("throwable");
+%><h1>Detailed exception</h1>
+<code><pre><%
+    t.printStackTrace(new PrintWriter(out));
+%></pre>
+</code><%
+    }
+%>
 </body>
 </html>

@@ -84,9 +84,8 @@ public class ProductImageUploadServlet extends HttpServlet {
 
             response.sendRedirect(request.getContextPath() + "/product/list");
         } catch (Exception e) {
-            request.setAttribute("error", "Error: " + e.getMessage());
-            request.setAttribute("back", "/product/list");
-            request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
+            request.setAttribute("throwable", e);
+            request.getRequestDispatcher("/WEB-INF/jsp/products.jsp").forward(request, response);
         }
 
     }

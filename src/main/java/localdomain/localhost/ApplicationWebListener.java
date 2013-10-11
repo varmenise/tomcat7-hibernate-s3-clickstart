@@ -53,7 +53,7 @@ public class ApplicationWebListener implements ServletContextListener {
         servletContextEvent.getServletContext().setAttribute(EntityManagerFactory.class.getName(), entityManagerFactory);
         logger.debug("JPA EntityManagerFactory created");
 
-        // DEMO INSERT FAKE DATA
+        // DEMO INSERT DEMO DATA
         EntityManager em = entityManagerFactory.createEntityManager();
         Query query = em.createQuery("select p from Product p");
         List resultList = query.getResultList();
@@ -62,15 +62,15 @@ public class ApplicationWebListener implements ServletContextListener {
             em.persist(new Product(
                     "Long Island Iced Tea",
                     "http://bees-shop.s3-website-us-east-1.amazonaws.com/340757408_d3cbdba2f2.jpg",
-                    "http://bees-shop.s3-website-us-east-1.amazonaws.com/340757408_d3cbdba2f2.jpg"));
+                    "http://www.flickr.com/photos/alisdair/340757408/"));
             em.persist(new Product(
                     "Sex on the beach",
                     "http://bees-shop.s3-website-us-east-1.amazonaws.com/5115940004_2825a4548e.jpg",
-                    "http://bees-shop.s3-website-us-east-1.amazonaws.com/5115940004_2825a4548e.jpg"));
+                    "http://www.flickr.com/photos/elv/5115940004/"));
             em.getTransaction().commit();
-            logger.debug("Demo products inserted in the database");
+            logger.info("Demo products inserted in the database");
         } else {
-            logger.debug("Don't insert demo products in the database, {} products already found in the db", resultList.size());
+            logger.info("Don't insert demo products in the database, {} products already found in the db", resultList.size());
         }
 
     }
