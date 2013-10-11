@@ -49,9 +49,8 @@ public class AmazonS3ConfigurationServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/product/list");
 
         } catch (Exception e) {
-            request.setAttribute("error", "Error: " + e.getMessage());
-            request.setAttribute("back", "/");
-            request.getRequestDispatcher("/WEB-INF/jsp/error.jsp").forward(request, response);
+            request.setAttribute("throwable", e);
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
     }
 

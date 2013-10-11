@@ -34,10 +34,8 @@ import java.util.List;
 public class ProductListServlet extends HttpServlet {
 
     protected final Logger logger = LoggerFactory.getLogger(getClass());
-    private EntityManagerFactory emf;
-    private static EntityManagerFactory entityManagerFactory;
 
-    public static AmazonS3Resources s3Resources;
+    private EntityManagerFactory emf;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
