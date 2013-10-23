@@ -17,7 +17,7 @@ You will need to enter your AWS credentials and also the bucket name in which yo
 
 ### Step 2: Add products ###
 
-Once you are sucessfully authenticated on AmazonS3, you can now starting adding new products to the list. You just need the name, the image and the credits of the image.
+Once you are sucessfully authenticated on AmazonS3, you can now start adding new products to the list. You just need the product name, the image file and the credits of the image.
 
 <img alt="Bees Shop - CloudBees MySQL" src="https://raw.github.com/fbelzunc/tomcat7-hibernate-s3-clickstart/master/src/site/img/product-addproduct.png" style="width: 70%;"/>
 
