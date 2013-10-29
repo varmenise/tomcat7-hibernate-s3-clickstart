@@ -5,6 +5,7 @@
     "description" : "Deploy your Amazon S3 web application on Tomcat 7",
     "icon": "https://raw.github.com/CloudBees-community/tomcat7-hibernate-s3-clickstart/master/clickstart-icon.png",
     "doc-url" : "https://github.com/CloudBees-community/tomcat7-hibernate-s3-clickstart/blob/master/README.md",
+    "app-package" : "https://repository-community.forge.cloudbees.com/snapshot/localdomain/localhost/tomcat7-hibernate-amazonS3-clickstart/1.0-SNAPSHOT/tomcat7-hibernate-amazonS3-clickstart-1.0-20131029.085524-1.war",
     "supported-by" : "cloudbees",
 
     "runtime": {
