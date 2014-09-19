@@ -1,5 +1,5 @@
 
-ciao Welcome to Amazon S3 ClickStart on CloudBees
+ciao ciao Welcome to Amazon S3 ClickStart on CloudBees
 
 This is a "ClickStart" that gets you going with a simple Maven Amazon S3 "seed" project starting point, which will show you how to upload an image to a permanent filesysten in Amazon S3. You can launch it here:
 
